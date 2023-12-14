@@ -1,0 +1,8 @@
+prefix=/home/bonato/Documents/catkin_ws/install
+
+Name: save_file
+Description: Description of save_file
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib -lsave_file
+Requires: roscpp rospy std_msgs geometry_msgs

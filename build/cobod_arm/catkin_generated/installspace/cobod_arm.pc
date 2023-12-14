@@ -1,0 +1,8 @@
+prefix=/home/bonato/Documents/catkin_ws/install
+
+Name: cobod_arm
+Description: Description of cobod_arm
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
