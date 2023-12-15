@@ -52,8 +52,9 @@ The simulation is using the same tools as the real robot; the polyscope and the 
 To have a simualted polyscope you need to build and start the docker_polyscope. 
 It will open a GUI exaccly replicating the real polyscope. Everything is preconfigured on the docker as well. 
 You juste need to do it as it was a real robot plus launch rviz : 
-
 roslaunch ur_lasa ridgeback_rviz.launch
+
+Furthemore, if later you want to create different programs, it has a volume bind to the docker. So you can save all the programs you want.
 
 
 
