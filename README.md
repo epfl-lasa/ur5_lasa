@@ -1,59 +1,35 @@
-UR5 with ROS
-Repository Contents
-This section outlines the contents available in the repository:
+UR5 on Ridgeback Platform
+This repository is a comprehensive guide for utilizing the Universal Robots UR5 robotic arm mounted on the Ridgeback mobile base platform.
 
-1. ROS Configuration Packages
-Package 1: Description of what this package contains.
-Package 2: Description of what this package contains.
-Package 3: Description of what this package contains.
-2. URCaps Integration
-URCaps ROS Interface: Details about the URCaps integration and its functionalities.
-Pre-configured URCaps for Ridgeback: Explanation of the URCaps already installed and configured on the Ridgeback platform.
-Usage Instructions
-This section provides instructions on how to use the repository for running UR5 with ROS in real and simulated environments:
+Purpose
+The purpose of this repository is to provide detailed instructions and resources on using the UR5 robot arm in conjunction with the Ridgeback mobile base. It covers three primary aspects:
 
-Real Environment Setup
-Prerequisites
-UR5 Robot Arm: Ensure hardware connectivity with the UR5 robot arm.
-ROS Installation: Properly install ROS on your system.
-Steps
-Clone Repository:
+Setup and Requirements for UR5 on Ridgeback
 
-bash
-Copy code
-git clone <repository_url>
-Build ROS Workspace:
+Understanding the prerequisites necessary to use the UR5 on the Ridgeback platform.
+Installation guidelines for essential software, drivers, and dependencies specific to this configuration.
+Real Robot Usage on Ridgeback
 
-bash
-Copy code
-cd <your_ros_workspace>
-catkin_make
-source devel/setup.bash
-Launch ROS Controller:
+Instructions and guidelines for operating the UR5 while mounted on the Ridgeback mobile base.
+Safety protocols, calibration procedures, and operational best practices tailored to this setup.
+Simulation Usage for UR5 on Ridgeback
 
-bash
-Copy code
-roslaunch <your_package_name> <real_controller_launch_file>.launch
-Initiate URCaps on Polyscope:
+Utilizing simulation environments to simulate and test UR5 functionalities on the Ridgeback platform.
+Integration with simulation software, sample code, and simulations specific to this configuration.
+Getting Started
+1. Using the UR5 on Ridgeback
+Requirements: Detail the hardware, software, and environmental prerequisites needed for the UR5 on the Ridgeback platform.
+Installation: Step-by-step instructions for setting up the UR5 environment specific to the Ridgeback integration.
+2. Real Robot Operation on Ridgeback
+Safety Guidelines: Essential safety protocols and precautions when working with the UR5 mounted on Ridgeback.
+Calibration and Setup: Instructions for calibrating the UR5 on the Ridgeback, setting its home position, and ensuring proper functionality.
+Operating Instructions: Detailed steps on how to use the UR5 while mounted on the Ridgeback for various tasks or applications.
+3. Simulation Usage for UR5 on Ridgeback
+Simulator Setup: Guidance on setting up the simulation environment for the UR5 on the Ridgeback platform.
+Simulated Tasks: Examples and instructions for running simulated tasks of the UR5 on Ridgeback.
+Integration with Tools: How to integrate the UR5 mounted on Ridgeback with different simulation tools or environments.
+Contributing
+If you wish to contribute to this repository, follow the guidelines outlined in CONTRIBUTING.md for a smooth collaboration process.
 
-Start the urcaps_ros program on the Polyscope interface after launching the ROS controller to establish communication.
-Simulation Environment Setup
-Prerequisites
-URCaps Package for Simulation: Install the URCaps package compatible with the simulation environment.
-ROS Installation for Simulation: Ensure ROS is installed in the simulation setup.
-Steps
-Setup URCaps for Simulation:
-
-Ensure the URCaps package for simulation is installed and configured for use.
-Build ROS Workspace:
-
-Similar to the real environment setup.
-Launch ROS Controller for Simulation:
-
-bash
-Copy code
-roslaunch <your_package_name> <sim_controller_launch_file>.launch
-Important Notes
-Pre-installed URCaps on Ridgeback: Explain the availability and usage of pre-installed URCaps on the Ridgeback platform.
-Customization: Encourage customization of launch files or configurations based on specific project requirements.
-For further assistance or troubleshooting, refer to the documentation or contact support.
+Support and Feedback
+For questions, issues, or suggestions related to using the UR5 on the Ridgeback platform, please open an issue or reach out to [maintainer/contact] for assistance.
