@@ -1,8 +1,8 @@
 prefix=/home/bonato/Documents/catkin_ws/devel
 
-Name: runningFolder
-Description: Description of runningFolder
+Name: runningfolder
+Description: Description of runningfolder
 Version: 0.0.0
 Cflags: 
-Libs: -L${prefix}/lib -lrunningFolder
+Libs: -L${prefix}/lib -lrunningfolder
 Requires: roscpp rospy std_msgs geometry_msgs
