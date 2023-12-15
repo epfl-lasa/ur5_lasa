@@ -1,4 +1,5 @@
-UR5 on Ridgeback Platform
+<img width="598" alt="Capture d’écran 2023-12-15 à 16 37 13" src="https://github.com/bonato47/ridgeback_ur5/assets/61695400/06b1f045-8f7e-476d-9fa8-f0a5f70b3ba6">UR5 on Ridgeback Platform
+
 This repository is a comprehensive guide for utilizing the Universal Robots UR5 robotic arm mounted on the Ridgeback mobile base platform.
 
 Purpose:
@@ -43,6 +44,7 @@ strictness: 2
 start_asap: false
 timeout: 0.0" 
 
+<img width="598" alt="polyscope" src="https://github.com/bonato47/ridgeback_ur5/assets/61695400/6602d7c3-0cf7-450e-83ef-2ee70f2d69eb">
 
 3) Simulation Usage for UR5 on Ridgeback
 The simulation is using the same tools as the real robot; the polyscope and the ur_robot_driver.
