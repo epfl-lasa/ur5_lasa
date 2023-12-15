@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bonato/Documents/catkin_ws/devel/lib/ur_robot_driver/ur_robot_driver_node"
-  "/home/bonato/Documents/catkin_ws/devel/lib/ur_robot_driver/ur_robot_driver_node.pdb"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/ur_robot_driver/ur_robot_driver_node"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/ur_robot_driver/ur_robot_driver_node.pdb"
   "CMakeFiles/ur_robot_driver_node.dir/src/dashboard_client_ros.cpp.o"
   "CMakeFiles/ur_robot_driver_node.dir/src/hardware_interface.cpp.o"
   "CMakeFiles/ur_robot_driver_node.dir/src/hardware_interface_node.cpp.o"

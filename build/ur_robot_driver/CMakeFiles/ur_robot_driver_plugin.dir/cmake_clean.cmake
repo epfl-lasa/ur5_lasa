@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bonato/Documents/catkin_ws/devel/lib/libur_robot_driver_plugin.pdb"
-  "/home/bonato/Documents/catkin_ws/devel/lib/libur_robot_driver_plugin.so"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/libur_robot_driver_plugin.pdb"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/libur_robot_driver_plugin.so"
   "CMakeFiles/ur_robot_driver_plugin.dir/src/dashboard_client_ros.cpp.o"
   "CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o"
 )

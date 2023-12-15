@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bonato/Documents/catkin_ws/devel/lib/ur_robot_driver/dashboard_client"
-  "/home/bonato/Documents/catkin_ws/devel/lib/ur_robot_driver/dashboard_client.pdb"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/ur_robot_driver/dashboard_client"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/ur_robot_driver/dashboard_client.pdb"
   "CMakeFiles/dashboard_client.dir/src/dashboard_client_node.cpp.o"
   "CMakeFiles/dashboard_client.dir/src/dashboard_client_ros.cpp.o"
 )

@@ -1,0 +1,8 @@
+prefix=/home/bonato/Documents/ridgeback_ur5/devel
+
+Name: ur_lasa
+Description: Description of ur_lasa
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../.
 PROJECT_CATKIN_DEPENDS = "roscpp;ur_robot_driver".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "/usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.6.2;/opt/ros/noetic/lib/x86_64-linux-gnu/liburcl.so".split(';') if "/usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.6.2;/opt/ros/noetic/lib/x86_64-linux-gnu/liburcl.so" != "" else []
 PROJECT_NAME = "ur_calibration"
-PROJECT_SPACE_DIR = "/home/bonato/Documents/catkin_ws/install"
+PROJECT_SPACE_DIR = "/home/bonato/Documents/ridgeback_ur5/install"
 PROJECT_VERSION = "2.1.2"

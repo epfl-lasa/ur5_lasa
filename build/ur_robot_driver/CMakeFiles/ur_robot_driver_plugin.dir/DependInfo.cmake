@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/bonato/Documents/catkin_ws/src/ur_robot_driver/src/dashboard_client_ros.cpp" "/home/bonato/Documents/catkin_ws/build/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/src/dashboard_client_ros.cpp.o"
-  "/home/bonato/Documents/catkin_ws/src/ur_robot_driver/src/hardware_interface.cpp" "/home/bonato/Documents/catkin_ws/build/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o"
+  "/home/bonato/Documents/ridgeback_ur5/src/ur_robot_driver/src/dashboard_client_ros.cpp" "/home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/src/dashboard_client_ros.cpp.o"
+  "/home/bonato/Documents/ridgeback_ur5/src/ur_robot_driver/src/hardware_interface.cpp" "/home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver/CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -20,8 +20,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/bonato/Documents/catkin_ws/src/ur_robot_driver/include"
-  "/home/bonato/Documents/catkin_ws/devel/include"
+  "/home/bonato/Documents/ridgeback_ur5/src/ur_robot_driver/include"
+  "/home/bonato/Documents/ridgeback_ur5/devel/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
   "/opt/ros/noetic/include"

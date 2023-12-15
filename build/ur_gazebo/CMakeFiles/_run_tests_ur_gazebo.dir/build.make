@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bonato/Documents/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/bonato/Documents/ridgeback_ur5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bonato/Documents/catkin_ws/build
+CMAKE_BINARY_DIR = /home/bonato/Documents/ridgeback_ur5/build
 
 # Utility rule file for _run_tests_ur_gazebo.
 
@@ -63,10 +63,10 @@ ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/build: _run_tests_ur_gazebo
 .PHONY : ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/build
 
 ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/clean:
-	cd /home/bonato/Documents/catkin_ws/build/ur_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_ur_gazebo.dir/cmake_clean.cmake
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_ur_gazebo.dir/cmake_clean.cmake
 .PHONY : ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/clean
 
 ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/depend:
-	cd /home/bonato/Documents/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/catkin_ws/src /home/bonato/Documents/catkin_ws/src/ur_gazebo /home/bonato/Documents/catkin_ws/build /home/bonato/Documents/catkin_ws/build/ur_gazebo /home/bonato/Documents/catkin_ws/build/ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bonato/Documents/ridgeback_ur5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/ridgeback_ur5/src /home/bonato/Documents/ridgeback_ur5/src/ur_gazebo /home/bonato/Documents/ridgeback_ur5/build /home/bonato/Documents/ridgeback_ur5/build/ur_gazebo /home/bonato/Documents/ridgeback_ur5/build/ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur_gazebo/CMakeFiles/_run_tests_ur_gazebo.dir/depend
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bonato/Documents/catkin_ws/devel/lib/libur5_kin.pdb"
-  "/home/bonato/Documents/catkin_ws/devel/lib/libur5_kin.so"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/libur5_kin.pdb"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/libur5_kin.so"
   "CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o"
 )
 

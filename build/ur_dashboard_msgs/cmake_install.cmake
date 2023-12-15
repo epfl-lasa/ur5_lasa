@@ -1,8 +1,8 @@
-# Install script for directory: /home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs
+# Install script for directory: /home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bonato/Documents/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bonato/Documents/ridgeback_ur5/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,88 +39,88 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/msg" TYPE FILE FILES
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/msg/ProgramState.msg"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/msg/RobotMode.msg"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/msg/SafetyMode.msg"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/msg/ProgramState.msg"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/msg/RobotMode.msg"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/msg/SafetyMode.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/srv" TYPE FILE FILES
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/AddToLog.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/GetLoadedProgram.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/GetProgramState.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/GetRobotMode.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/GetSafetyMode.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/IsInRemoteControl.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/IsProgramRunning.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/IsProgramSaved.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/Load.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/Popup.srv"
-    "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/srv/RawRequest.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/AddToLog.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/GetLoadedProgram.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/GetProgramState.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/GetRobotMode.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/GetSafetyMode.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/IsInRemoteControl.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/IsProgramRunning.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/IsProgramSaved.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/Load.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/Popup.srv"
+    "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/srv/RawRequest.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/action" TYPE FILE FILES "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/action/SetMode.action")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/action" TYPE FILE FILES "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/action/SetMode.action")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/msg" TYPE FILE FILES
-    "/home/bonato/Documents/catkin_ws/devel/share/ur_dashboard_msgs/msg/SetModeAction.msg"
-    "/home/bonato/Documents/catkin_ws/devel/share/ur_dashboard_msgs/msg/SetModeActionGoal.msg"
-    "/home/bonato/Documents/catkin_ws/devel/share/ur_dashboard_msgs/msg/SetModeActionResult.msg"
-    "/home/bonato/Documents/catkin_ws/devel/share/ur_dashboard_msgs/msg/SetModeActionFeedback.msg"
-    "/home/bonato/Documents/catkin_ws/devel/share/ur_dashboard_msgs/msg/SetModeGoal.msg"
-    "/home/bonato/Documents/catkin_ws/devel/share/ur_dashboard_msgs/msg/SetModeResult.msg"
-    "/home/bonato/Documents/catkin_ws/devel/share/ur_dashboard_msgs/msg/SetModeFeedback.msg"
+    "/home/bonato/Documents/ridgeback_ur5/devel/share/ur_dashboard_msgs/msg/SetModeAction.msg"
+    "/home/bonato/Documents/ridgeback_ur5/devel/share/ur_dashboard_msgs/msg/SetModeActionGoal.msg"
+    "/home/bonato/Documents/ridgeback_ur5/devel/share/ur_dashboard_msgs/msg/SetModeActionResult.msg"
+    "/home/bonato/Documents/ridgeback_ur5/devel/share/ur_dashboard_msgs/msg/SetModeActionFeedback.msg"
+    "/home/bonato/Documents/ridgeback_ur5/devel/share/ur_dashboard_msgs/msg/SetModeGoal.msg"
+    "/home/bonato/Documents/ridgeback_ur5/devel/share/ur_dashboard_msgs/msg/SetModeResult.msg"
+    "/home/bonato/Documents/ridgeback_ur5/devel/share/ur_dashboard_msgs/msg/SetModeFeedback.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/cmake" TYPE FILE FILES "/home/bonato/Documents/catkin_ws/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/cmake" TYPE FILE FILES "/home/bonato/Documents/ridgeback_ur5/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/bonato/Documents/catkin_ws/devel/include/ur_dashboard_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/bonato/Documents/ridgeback_ur5/devel/include/ur_dashboard_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/bonato/Documents/catkin_ws/devel/share/roseus/ros/ur_dashboard_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/bonato/Documents/ridgeback_ur5/devel/share/roseus/ros/ur_dashboard_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/bonato/Documents/catkin_ws/devel/share/common-lisp/ros/ur_dashboard_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/bonato/Documents/ridgeback_ur5/devel/share/common-lisp/ros/ur_dashboard_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/bonato/Documents/catkin_ws/devel/share/gennodejs/ros/ur_dashboard_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/bonato/Documents/ridgeback_ur5/devel/share/gennodejs/ros/ur_dashboard_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/bonato/Documents/catkin_ws/devel/lib/python3/dist-packages/ur_dashboard_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/bonato/Documents/ridgeback_ur5/devel/lib/python3/dist-packages/ur_dashboard_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/bonato/Documents/catkin_ws/devel/lib/python3/dist-packages/ur_dashboard_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/bonato/Documents/ridgeback_ur5/devel/lib/python3/dist-packages/ur_dashboard_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bonato/Documents/catkin_ws/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bonato/Documents/ridgeback_ur5/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/cmake" TYPE FILE FILES "/home/bonato/Documents/catkin_ws/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/cmake" TYPE FILE FILES "/home/bonato/Documents/ridgeback_ur5/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs/cmake" TYPE FILE FILES
-    "/home/bonato/Documents/catkin_ws/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgsConfig.cmake"
-    "/home/bonato/Documents/catkin_ws/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgsConfig-version.cmake"
+    "/home/bonato/Documents/ridgeback_ur5/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgsConfig.cmake"
+    "/home/bonato/Documents/ridgeback_ur5/build/ur_dashboard_msgs/catkin_generated/installspace/ur_dashboard_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs" TYPE FILE FILES "/home/bonato/Documents/catkin_ws/src/ur_dashboard_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_dashboard_msgs" TYPE FILE FILES "/home/bonato/Documents/ridgeback_ur5/src/ur_dashboard_msgs/package.xml")
 endif()
 

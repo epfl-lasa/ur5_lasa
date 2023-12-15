@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bonato/Documents/catkin_ws/devel/lib/liburcl_log_handler.pdb"
-  "/home/bonato/Documents/catkin_ws/devel/lib/liburcl_log_handler.so"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/liburcl_log_handler.pdb"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/liburcl_log_handler.so"
   "CMakeFiles/urcl_log_handler.dir/src/urcl_log_handler.cpp.o"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bonato/Documents/catkin_ws/devel/lib/libur10_moveit_plugin.pdb"
-  "/home/bonato/Documents/catkin_ws/devel/lib/libur10_moveit_plugin.so"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/libur10_moveit_plugin.pdb"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/libur10_moveit_plugin.so"
   "CMakeFiles/ur10_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o"
 )
 

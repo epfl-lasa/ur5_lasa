@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bonato/Documents/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/bonato/Documents/ridgeback_ur5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bonato/Documents/catkin_ws/build
+CMAKE_BINARY_DIR = /home/bonato/Documents/ridgeback_ur5/build
 
 # Include any dependencies generated for this target.
 include ur_kinematics/CMakeFiles/ur10e_kin.dir/depend.make
@@ -58,17 +58,17 @@ include ur_kinematics/CMakeFiles/ur10e_kin.dir/progress.make
 include ur_kinematics/CMakeFiles/ur10e_kin.dir/flags.make
 
 ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o: ur_kinematics/CMakeFiles/ur10e_kin.dir/flags.make
-ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o: /home/bonato/Documents/catkin_ws/src/ur_kinematics/src/ur_kin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bonato/Documents/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o"
-	cd /home/bonato/Documents/catkin_ws/build/ur_kinematics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o -c /home/bonato/Documents/catkin_ws/src/ur_kinematics/src/ur_kin.cpp
+ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o: /home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/src/ur_kin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bonato/Documents/ridgeback_ur5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o"
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_kinematics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o -c /home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/src/ur_kin.cpp
 
 ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.i"
-	cd /home/bonato/Documents/catkin_ws/build/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bonato/Documents/catkin_ws/src/ur_kinematics/src/ur_kin.cpp > CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.i
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/src/ur_kin.cpp > CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.i
 
 ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.s"
-	cd /home/bonato/Documents/catkin_ws/build/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bonato/Documents/catkin_ws/src/ur_kinematics/src/ur_kin.cpp -o CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.s
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/src/ur_kin.cpp -o CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.s
 
 # Object files for target ur10e_kin
 ur10e_kin_OBJECTS = \
@@ -77,22 +77,22 @@ ur10e_kin_OBJECTS = \
 # External object files for target ur10e_kin
 ur10e_kin_EXTERNAL_OBJECTS =
 
-/home/bonato/Documents/catkin_ws/devel/lib/libur10e_kin.so: ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o
-/home/bonato/Documents/catkin_ws/devel/lib/libur10e_kin.so: ur_kinematics/CMakeFiles/ur10e_kin.dir/build.make
-/home/bonato/Documents/catkin_ws/devel/lib/libur10e_kin.so: ur_kinematics/CMakeFiles/ur10e_kin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bonato/Documents/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/bonato/Documents/catkin_ws/devel/lib/libur10e_kin.so"
-	cd /home/bonato/Documents/catkin_ws/build/ur_kinematics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ur10e_kin.dir/link.txt --verbose=$(VERBOSE)
+/home/bonato/Documents/ridgeback_ur5/devel/lib/libur10e_kin.so: ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o
+/home/bonato/Documents/ridgeback_ur5/devel/lib/libur10e_kin.so: ur_kinematics/CMakeFiles/ur10e_kin.dir/build.make
+/home/bonato/Documents/ridgeback_ur5/devel/lib/libur10e_kin.so: ur_kinematics/CMakeFiles/ur10e_kin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bonato/Documents/ridgeback_ur5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/bonato/Documents/ridgeback_ur5/devel/lib/libur10e_kin.so"
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_kinematics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ur10e_kin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-ur_kinematics/CMakeFiles/ur10e_kin.dir/build: /home/bonato/Documents/catkin_ws/devel/lib/libur10e_kin.so
+ur_kinematics/CMakeFiles/ur10e_kin.dir/build: /home/bonato/Documents/ridgeback_ur5/devel/lib/libur10e_kin.so
 
 .PHONY : ur_kinematics/CMakeFiles/ur10e_kin.dir/build
 
 ur_kinematics/CMakeFiles/ur10e_kin.dir/clean:
-	cd /home/bonato/Documents/catkin_ws/build/ur_kinematics && $(CMAKE_COMMAND) -P CMakeFiles/ur10e_kin.dir/cmake_clean.cmake
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_kinematics && $(CMAKE_COMMAND) -P CMakeFiles/ur10e_kin.dir/cmake_clean.cmake
 .PHONY : ur_kinematics/CMakeFiles/ur10e_kin.dir/clean
 
 ur_kinematics/CMakeFiles/ur10e_kin.dir/depend:
-	cd /home/bonato/Documents/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/catkin_ws/src /home/bonato/Documents/catkin_ws/src/ur_kinematics /home/bonato/Documents/catkin_ws/build /home/bonato/Documents/catkin_ws/build/ur_kinematics /home/bonato/Documents/catkin_ws/build/ur_kinematics/CMakeFiles/ur10e_kin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bonato/Documents/ridgeback_ur5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/ridgeback_ur5/src /home/bonato/Documents/ridgeback_ur5/src/ur_kinematics /home/bonato/Documents/ridgeback_ur5/build /home/bonato/Documents/ridgeback_ur5/build/ur_kinematics /home/bonato/Documents/ridgeback_ur5/build/ur_kinematics/CMakeFiles/ur10e_kin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur_kinematics/CMakeFiles/ur10e_kin.dir/depend
 

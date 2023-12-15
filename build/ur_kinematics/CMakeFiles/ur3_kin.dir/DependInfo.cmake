@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/bonato/Documents/catkin_ws/src/ur_kinematics/src/ur_kin.cpp" "/home/bonato/Documents/catkin_ws/build/ur_kinematics/CMakeFiles/ur3_kin.dir/src/ur_kin.cpp.o"
+  "/home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/src/ur_kin.cpp" "/home/bonato/Documents/ridgeback_ur5/build/ur_kinematics/CMakeFiles/ur3_kin.dir/src/ur_kin.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,7 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/bonato/Documents/catkin_ws/src/ur_kinematics/include"
+  "/home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

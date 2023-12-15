@@ -6,5 +6,5 @@ CXX_FLAGS = -O2 -g -DNDEBUG   -Wall -Wextra -Wno-unused-parameter
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ur_robot_driver\"
 
-CXX_INCLUDES = -I/home/bonato/Documents/catkin_ws/src/ur_robot_driver/include -I/home/bonato/Documents/catkin_ws/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/bonato/Documents/ridgeback_ur5/src/ur_robot_driver/include -I/home/bonato/Documents/ridgeback_ur5/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
 

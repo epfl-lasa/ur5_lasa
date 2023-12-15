@@ -1,4 +1,4 @@
-prefix=/home/bonato/Documents/catkin_ws/devel
+prefix=/home/bonato/Documents/ridgeback_ur5/devel
 
 Name: ur_calibration
 Description: Description of ur_calibration

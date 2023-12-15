@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bonato/Documents/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/bonato/Documents/ridgeback_ur5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bonato/Documents/catkin_ws/build
+CMAKE_BINARY_DIR = /home/bonato/Documents/ridgeback_ur5/build
 
 # Utility rule file for clean_test_results_ur_calibration.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/bonato/Documents/catkin_ws/build
 include ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/progress.make
 
 ur_calibration/CMakeFiles/clean_test_results_ur_calibration:
-	cd /home/bonato/Documents/catkin_ws/build/ur_calibration && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/bonato/Documents/catkin_ws/build/test_results/ur_calibration
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_calibration && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/bonato/Documents/ridgeback_ur5/build/test_results/ur_calibration
 
 clean_test_results_ur_calibration: ur_calibration/CMakeFiles/clean_test_results_ur_calibration
 clean_test_results_ur_calibration: ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/build.make
@@ -67,10 +67,10 @@ ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/build: clean_tes
 .PHONY : ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/build
 
 ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/clean:
-	cd /home/bonato/Documents/catkin_ws/build/ur_calibration && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ur_calibration.dir/cmake_clean.cmake
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_calibration && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ur_calibration.dir/cmake_clean.cmake
 .PHONY : ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/clean
 
 ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/depend:
-	cd /home/bonato/Documents/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/catkin_ws/src /home/bonato/Documents/catkin_ws/src/ur_calibration /home/bonato/Documents/catkin_ws/build /home/bonato/Documents/catkin_ws/build/ur_calibration /home/bonato/Documents/catkin_ws/build/ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bonato/Documents/ridgeback_ur5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/ridgeback_ur5/src /home/bonato/Documents/ridgeback_ur5/src/ur_calibration /home/bonato/Documents/ridgeback_ur5/build /home/bonato/Documents/ridgeback_ur5/build/ur_calibration /home/bonato/Documents/ridgeback_ur5/build/ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/depend
 

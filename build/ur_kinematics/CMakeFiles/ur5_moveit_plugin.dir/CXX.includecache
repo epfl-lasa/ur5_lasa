@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/bonato/Documents/catkin_ws/src/ur_kinematics/include/ur_kinematics/ur_kin.h
+/home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/include/ur_kinematics/ur_kin.h
 
-/home/bonato/Documents/catkin_ws/src/ur_kinematics/include/ur_kinematics/ur_moveit_plugin.h
+/home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/include/ur_kinematics/ur_moveit_plugin.h
 ros/ros.h
 -
 random_numbers/random_numbers.h
@@ -42,7 +42,7 @@ moveit/robot_model/robot_model.h
 moveit/robot_state/robot_state.h
 -
 
-/home/bonato/Documents/catkin_ws/src/ur_kinematics/src/ur_moveit_plugin.cpp
+/home/bonato/Documents/ridgeback_ur5/src/ur_kinematics/src/ur_moveit_plugin.cpp
 class_loader/class_loader.h
 -
 tf_conversions/tf_kdl.h

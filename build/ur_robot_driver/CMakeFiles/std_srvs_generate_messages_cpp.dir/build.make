@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bonato/Documents/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/bonato/Documents/ridgeback_ur5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bonato/Documents/catkin_ws/build
+CMAKE_BINARY_DIR = /home/bonato/Documents/ridgeback_ur5/build
 
 # Utility rule file for std_srvs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/build: std_srvs_ge
 .PHONY : ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 
 ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
-	cd /home/bonato/Documents/catkin_ws/build/ur_robot_driver && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 
 ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend:
-	cd /home/bonato/Documents/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/catkin_ws/src /home/bonato/Documents/catkin_ws/src/ur_robot_driver /home/bonato/Documents/catkin_ws/build /home/bonato/Documents/catkin_ws/build/ur_robot_driver /home/bonato/Documents/catkin_ws/build/ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bonato/Documents/ridgeback_ur5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/ridgeback_ur5/src /home/bonato/Documents/ridgeback_ur5/src/ur_robot_driver /home/bonato/Documents/ridgeback_ur5/build /home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver /home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur_robot_driver/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
 

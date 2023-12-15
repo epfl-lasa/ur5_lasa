@@ -95,7 +95,18 @@ if [ "${MODE}" != "connect" ]; then
 #    FWD_ARGS+=("--ip 128.178.145.217")
     
 
-
+    
+    #Add volume
+    
+    docker volume rm programs
+    docker volume create --driver local \
+    --opt type="none" \
+    --opt device="${PWD}/programs" \
+    --opt o="bind" \
+    "programs"
+    
+    FWD_ARGS+=(--volume="programs:/ursim/programs:rw")
+    
     # Setup git config
     #FWD_ARGS+=(--volume="${HOME}/.gitconfig:/openpose/.gitconfig:ro")
 fi

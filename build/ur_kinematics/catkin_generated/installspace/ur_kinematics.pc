@@ -1,4 +1,4 @@
-prefix=/home/bonato/Documents/catkin_ws/install
+prefix=/home/bonato/Documents/ridgeback_ur5/install
 
 Name: ur_kinematics
 Description: Description of ur_kinematics

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bonato/Documents/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/bonato/Documents/ridgeback_ur5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bonato/Documents/catkin_ws/build
+CMAKE_BINARY_DIR = /home/bonato/Documents/ridgeback_ur5/build
 
 # Utility rule file for pass_through_controllers_gencfg.
 
@@ -63,10 +63,10 @@ ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/build: pass_throu
 .PHONY : ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/build
 
 ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/clean:
-	cd /home/bonato/Documents/catkin_ws/build/ur_robot_driver && $(CMAKE_COMMAND) -P CMakeFiles/pass_through_controllers_gencfg.dir/cmake_clean.cmake
+	cd /home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver && $(CMAKE_COMMAND) -P CMakeFiles/pass_through_controllers_gencfg.dir/cmake_clean.cmake
 .PHONY : ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/clean
 
 ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/depend:
-	cd /home/bonato/Documents/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/catkin_ws/src /home/bonato/Documents/catkin_ws/src/ur_robot_driver /home/bonato/Documents/catkin_ws/build /home/bonato/Documents/catkin_ws/build/ur_robot_driver /home/bonato/Documents/catkin_ws/build/ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bonato/Documents/ridgeback_ur5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bonato/Documents/ridgeback_ur5/src /home/bonato/Documents/ridgeback_ur5/src/ur_robot_driver /home/bonato/Documents/ridgeback_ur5/build /home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver /home/bonato/Documents/ridgeback_ur5/build/ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur_robot_driver/CMakeFiles/pass_through_controllers_gencfg.dir/depend
 

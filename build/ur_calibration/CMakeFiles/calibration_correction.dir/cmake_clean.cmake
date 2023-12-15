@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bonato/Documents/catkin_ws/devel/lib/ur_calibration/calibration_correction"
-  "/home/bonato/Documents/catkin_ws/devel/lib/ur_calibration/calibration_correction.pdb"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/ur_calibration/calibration_correction"
+  "/home/bonato/Documents/ridgeback_ur5/devel/lib/ur_calibration/calibration_correction.pdb"
   "CMakeFiles/calibration_correction.dir/src/calibration.cpp.o"
   "CMakeFiles/calibration_correction.dir/src/calibration_consumer.cpp.o"
   "CMakeFiles/calibration_correction.dir/src/calibration_correction.cpp.o"
