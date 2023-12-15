@@ -33,6 +33,9 @@ a) Initiate control by pressing 'Play' on the Polyscope interface (Polyscope ima
 Once these steps are completed, publish commands to desired topics. For instance, for the twist controller:
 twist_controller/command Ensure using the appropriate message type for command publication.
 
+<img width="598" alt="polyscope" src="https://github.com/bonato47/ridgeback_ur5/assets/61695400/6602d7c3-0cf7-450e-83ef-2ee70f2d69eb">
+
+
 All controllers defined in 'ur5_lasa/config/ur5_controllers' are accessible. Utilize ROS services to load and switch between controllers.
 example:
 - see the loaded controllers: 
@@ -44,7 +47,6 @@ strictness: 2
 start_asap: false
 timeout: 0.0" 
 
-<img width="598" alt="polyscope" src="https://github.com/bonato47/ridgeback_ur5/assets/61695400/6602d7c3-0cf7-450e-83ef-2ee70f2d69eb">
 
 3) Simulation Usage for UR5 on Ridgeback
 The simulation is using the same tools as the real robot; the polyscope and the ur_robot_driver.
