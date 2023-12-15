@@ -15,7 +15,7 @@ To effectively control the UR5 using ROS, the integration requires the use of th
 ### Startup:
 a) Power on both the Ridgeback and the UR5.
 
-### Polyscope Setup:
+### Polyscope Setup:
 a) On the Polyscope interface, navigate to:
     - 'Run Program'
     - Load the 'urcap_ros' file (Polyscope Image)
