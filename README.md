@@ -8,6 +8,8 @@ The purpose of this repository is to provide detailed instructions and resources
 ## 1) Setup and Requirements for UR5 on Ridgeback
 - All the packages provided in the 'src' folder are necessary to control the UR5 with ROS. These packages are modified versions derived from the Universal Robot repository (https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git). The main modifications include the addition of some ROS controllers, configuration of files specific to our real UR5, and simplification of the 'roslaunch' command to easily select various types of controllers. This setup also serves as an example for adding additional controllers if desired.
 
+- you need to have the ros control package : sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+
 ## 2) Real Robot Usage on Ridgeback
 To effectively control the UR5 using ROS, the integration requires the use of the Polyscope interface connected to the robot (image) and the preconfigured 'roslaunch' provided by Universal Robots. This integration is facilitated through URCAPS, already set up on the robot for seamless usage with ROS.
 
