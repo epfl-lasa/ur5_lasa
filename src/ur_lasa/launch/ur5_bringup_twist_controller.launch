@@ -16,7 +16,7 @@
     <arg name="trajectory_port" default="50003" doc="Port that will be opened by the d>
     <arg name="script_command_port" default="50004" doc="Port that will be opened by t>
     <arg name="tf_prefix" default="" doc="tf_prefix used for the robot."/>
-    <arg name="controllers" default="joint_state_controller twist_controller" doc="Con>
+    <arg name="controllers" default="joint_state_controller joint_group_pos_controller twist_controller" doc="Con>
     <arg name="stopped_controllers" default="joint_group_pos_controller " doc="Control>
     <arg name="controller_config_file" default="$(find ur_lasa)/config/ur5_controllers>
     <arg name="robot_description_file" default="$(find ur_description)/launch/load_ur5>
