@@ -32,7 +32,7 @@ a) Launch the preferred controller on the inboard computer using provided comman
 a) Initiate control by pressing 'Play' on the Polyscope interface (Polyscope image).
 
 Once these steps are completed, publish commands to desired topics. For instance, for the twist controller:
-twist_controller/command Ensure using the appropriate message type for command publication.
+/ur5/twist_controller/command Ensure using the appropriate message type for command publication.
 
 <img width="598" alt="polyscope" src="https://github.com/bonato47/ridgeback_ur5/assets/61695400/6602d7c3-0cf7-450e-83ef-2ee70f2d69eb">
 
@@ -40,9 +40,9 @@ twist_controller/command Ensure using the appropriate message type for command p
 All controllers defined in 'ur5_lasa/config/ur5_controllers' are accessible. Utilize ROS services to load and switch between controllers.
 example:
 - see the loaded controllers: 
-rosservice call /controller_manager/list_controllers   
+rosservice call /ur5/controller_manager/list_controllers   
 - switch controllers twist to pos: 
-rosservice call /controller_manager/switch_controller "start_controllers: ['joint_group_pos_controller']
+rosservice call /ur5/controller_manager/switch_controller "start_controllers: ['joint_group_pos_controller']
 stop_controllers: ['twist_controller']
 strictness: 2
 start_asap: false
