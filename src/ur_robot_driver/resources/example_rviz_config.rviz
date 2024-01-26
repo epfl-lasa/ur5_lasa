@@ -64,7 +64,10 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         base_link:
           Alpha: 1
           Show Axes: false
@@ -113,7 +116,7 @@ Visualization Manager:
           Show Trail: false
           Value: true
       Name: RobotModel
-      Robot Description: robot_description
+      Robot Description: ur5/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -124,30 +127,31 @@ Visualization Manager:
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
-        All Enabled: true
-
+        All Enabled: false
+        base:
+          Value: false
         base_link:
-          Value: true
+          Value: false
         base_link_inertia:
-          Value: true
+          Value: false
         flange:
-          Value: true
+          Value: false
         forearm_link:
-          Value: true
+          Value: false
         shoulder_link:
-          Value: true
+          Value: false
         tool0:
           Value: true
         tool0_controller:
-          Value: true
+          Value: false
         upper_arm_link:
-          Value: true
+          Value: false
         wrist_1_link:
-          Value: true
+          Value: false
         wrist_2_link:
-          Value: true
+          Value: false
         wrist_3_link:
-          Value: true
+          Value: false
       Marker Alpha: 1
       Marker Scale: 0.5
       Name: TF
@@ -156,6 +160,9 @@ Visualization Manager:
       Show Names: true
       Tree:
         base_link:
+          base:
+            tool0_controller:
+              {}
           base_link_inertia:
             shoulder_link:
               upper_arm_link:
@@ -182,14 +189,14 @@ Visualization Manager:
       Marker Topic: visualization_marker
       Name: Marker
       Namespaces:
-        twist: true
+        {}
       Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: base
     Frame Rate: 30
   Name: root
   Tools:
@@ -213,7 +220,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.1638174057006836
+      Distance: 3.2459888458251953
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -221,17 +228,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.15222527086734772
-        Y: 0.06449134647846222
-        Z: 0.6620094776153564
+        X: -0.038642849773168564
+        Y: -0.23682981729507446
+        Z: 0.48709335923194885
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.579796552658081
+      Pitch: 0.07479692250490189
       Target Frame: <Fixed Frame>
-      Yaw: 2.936748504638672
+      Yaw: 3.9867496490478516
     Saved: ~
 Window Geometry:
   Displays:
@@ -249,5 +256,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1386
-  X: 2191
-  Y: 197
+  X: 2233
+  Y: 301
