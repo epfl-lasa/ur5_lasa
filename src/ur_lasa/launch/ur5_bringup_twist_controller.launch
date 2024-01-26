@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <!-- Define the launch argument for the 'simu' flag -->
-  <arg name="simu" default="ON"/> <!-- Default value is Off -->
+  <arg name="simu" default="OFF"/> <!-- Default value is Off -->
 
   <!-- Conditional argument for robot_IP selection based on the 'simu' flag -->
   <arg unless="$(eval simu=='ON')" name="robot_ip" value="192.168.131.17"/>
