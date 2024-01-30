@@ -59,6 +59,10 @@ It will open a GUI exaccly replicating the real polyscope. Everything is preconf
 You juste need to do run: 
 bash start_simu.sh
 
+and the terminal run :
+roslaunch ur_lasa ur5_bringup_vel_controller.launch sim:=ON
+
+
 Furthemore, if later you want to create different programs, it has a volume bind to the docker. So you can save all the programs you want.
 
 
