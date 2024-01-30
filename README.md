@@ -26,7 +26,7 @@ All necessary configurations are preloaded.
 ### Launching Controllers:
 a) Launch the preferred controller on the inboard computer using provided commands.
  Each predefined launch incorporates the named controller and loads the position joint controller within. Custom launch files can later be created to include additional controllers.
- For example: roslaunch ur_lasa ur5_bringup_vel_controller.launch 
+ For example: roslaunch ur_lasa ur5_bringup_vel_controller.launch sim:=OFF
 
 ### Activating Control:
 a) Initiate control by pressing 'Play' on the Polyscope interface (Polyscope image).
@@ -56,9 +56,8 @@ To have a simualted polyscope you need to build and start the docker_polyscope.
 It will open a GUI exaccly replicating the real polyscope. Everything is preconfigured on the docker as well. 
 
 
-You juste need to do it as it was a real robot plus launch rviz : 
-roslaunch ur_lasa ur5_bringup_twist_controller.launch simu:=ON
-roslaunch ur_lasa ridgeback_rviz.launch
+You juste need to do run: 
+bash start_simu.sh
 
 Furthemore, if later you want to create different programs, it has a volume bind to the docker. So you can save all the programs you want.
 
