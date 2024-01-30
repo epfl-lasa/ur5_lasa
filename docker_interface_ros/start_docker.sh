@@ -1,7 +1,8 @@
 #!/bin/bash
-IMAGE_NAME="epfl-lasa/ur_sim"
+IMAGE_NAME="epfl-lasa/ur5_interface_ros"
 CONTAINER_NAME="${IMAGE_NAME//[\/.]/-}"
-MODE=()
+USERNAME="ros"
+MODE=(interactive)
 USE_NVIDIA_TOOLKIT=()
 NO_GPU=false
 
@@ -82,33 +83,30 @@ if [ "${MODE}" != "connect" ]; then
 
     # network for ros
     FWD_ARGS+=(--net=host)
+    FWD_ARGS+=(--env ROS_HOSTNAME="$(hostname)")
 
     # Handle GPU usage
     [[ ${USE_NVIDIA_TOOLKIT} = true ]] && GPU_FLAG="--gpus all" || GPU_FLAG=""
 
     # Other
-    FWD_ARGS+=("--rm")
-    FWD_ARGS+=("-it")
-    FWD_ARGS+=("-e")
-    FWD_ARGS+=(" ROBOT_MODEL=UR5")
-#    FWD_ARGS+=("--net ursim_net_lasa")
-#    FWD_ARGS+=("--ip 128.178.145.217")
-    
+    FWD_ARGS+=("--privileged")
+
 
     
-    #Add volume
-    
-    docker volume rm programs
+     # Add volume controller_ur5/
+    docker volume rm controller_ur5
     docker volume create --driver local \
     --opt type="none" \
-    --opt device="${PWD}/programs" \
+    --opt device="${PWD}/../src" \
     --opt o="bind" \
-    "programs"
+    "source_ur5_interface_ros"
+
+    FWD_ARGS+=(--volume="source_ur5_interface_ros:/home/ros/ros_ws/src/:rw")
     
-    FWD_ARGS+=(--volume="programs:/ursim/programs:rw")
-    
+
+
     # Setup git config
-    #FWD_ARGS+=(--volume="${HOME}/.gitconfig:/openpose/.gitconfig:ro")
+    FWD_ARGS+=(--volume="${HOME}/.gitconfig:/home/ros/.gitconfig:ro")
 fi
 
 # Trick aica-docker into making a server on a host network container
@@ -121,6 +119,7 @@ fi
 aica-docker \
     "${MODE}" \
     "${IMAGE_NAME}" \
+    -u "${USERNAME}" \
     -n "${CONTAINER_NAME}" \
     ${GPU_FLAG} \
     "${FWD_ARGS[@]}" \
