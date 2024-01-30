@@ -52,13 +52,12 @@ timeout: 0.0"
 ## 3) Simulation Usage for UR5 on Ridgeback
 The simulation is using the same tools as the real robot; the polyscope and the ur_robot_driver.
 To have a simualted polyscope you need to build and start the docker_polyscope. 
+
 It will open a GUI exaccly replicating the real polyscope. Everything is preconfigured on the docker as well. 
-you just need to create a bridge with the docker and the virtual robot with these commands:
-docker network create --subnet=192.168.56.0/24 ursim_net
-docker run --rm -it --net ursim_net --ip 192.168.56.101 -d universalrobots/ursim_cb3
 
 
 You juste need to do it as it was a real robot plus launch rviz : 
+roslaunch ur_lasa ur5_bringup_twist_controller.launch simu:=ON
 roslaunch ur_lasa ridgeback_rviz.launch
 
 Furthemore, if later you want to create different programs, it has a volume bind to the docker. So you can save all the programs you want.
