@@ -3,7 +3,7 @@
   <!-- Define the launch argument for the 'simu' flag -->
   <arg name="simu" default="ON"/> <!-- Default value is ON -->
   <arg if="$(eval simu=='ON')" name="robot_ip" value="172.17.0.2"/>
-  <arg unless="$(eval simu=='ON')" name="robot_ip" value="192.168.56.17"/>
+  <arg unless="$(eval simu=='ON')" name="robot_ip" value="192.168.131.17"/>
 
   <group ns="ur5">
     <arg name="debug" default="false" doc="Debug flag that will get passed on to ur_common.launch"/>
