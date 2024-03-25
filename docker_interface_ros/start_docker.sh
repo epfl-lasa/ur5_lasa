@@ -91,8 +91,6 @@ if [ "${MODE}" != "connect" ]; then
     # Other
     FWD_ARGS+=("--privileged")
 
-
-    
      # Add volume controller_ur5/
     docker volume rm controller_ur5
     docker volume create --driver local \
@@ -102,8 +100,6 @@ if [ "${MODE}" != "connect" ]; then
     "source_ur5_interface_ros"
 
     FWD_ARGS+=(--volume="source_ur5_interface_ros:/home/ros/ros_ws/src/:rw")
-    
-
 
     # Setup git config
     FWD_ARGS+=(--volume="${HOME}/.gitconfig:/home/ros/.gitconfig:ro")

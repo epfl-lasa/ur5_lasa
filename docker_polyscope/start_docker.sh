@@ -81,14 +81,13 @@ fi
 # Other
 FWD_ARGS+=("--rm")
 FWD_ARGS+=("-it")
+FWD_ARGS+=("--net=host")
+# FWD_ARGS+=("--ip=192.168.56.101")
+# FWD_ARGS+=("-d universalrobots/ursim_cb3")
 FWD_ARGS+=("-p")
 FWD_ARGS+=("6080:6080")
 FWD_ARGS+=("-e")
 FWD_ARGS+=("ROBOT_MODEL=UR5")
-#    FWD_ARGS+=("--net ursim_net_lasa")
-#    FWD_ARGS+=("--ip 128.178.145.217")
-
-
 
 #Add volume
 
@@ -103,8 +102,6 @@ FWD_ARGS+=(--volume="programs:/ursim/programs:rw")
 
 # Setup git config
 #FWD_ARGS+=(--volume="${HOME}/.gitconfig:/openpose/.gitconfig:ro")
-
-
 
 # Start docker using aica
 aica-docker \
