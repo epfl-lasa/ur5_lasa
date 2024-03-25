@@ -38,4 +38,16 @@
       <arg name="use_tool_communication" value="false" />
     </include>
   </group>
+  <
+  <
+  <
+  <
+  <
+  <
+  < HEAD
 </launch>
+=======
+
+<include if="$(eval simu=='ON')" file="$(find ur_lasa)/launch/ridgeback_rviz.launch" />
+</launch>
+>>>>>>> 12b3517cc6f2a810be6c2622c9ce201d399b613a

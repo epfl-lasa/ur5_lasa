@@ -57,6 +57,7 @@ It will open a GUI exaccly replicating the real polyscope. Everything is preconf
 
 
 You juste need to do run: 
+docker network create --subnet=192.168.56.0/24 ursim_net
 bash start_simu.sh
 
 and the terminal run :
