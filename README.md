@@ -26,7 +26,7 @@ All necessary configurations are preloaded.
 ### Launching Controllers:
 a) Launch the preferred controller on the inboard computer using provided commands.
  Each predefined launch incorporates the named controller and loads the position joint controller within. Custom launch files can later be created to include additional controllers.
- For example: roslaunch ur_lasa ur5_bringup_vel_controller.launch sim:=OFF
+ For example: roslaunch ur_lasa ur5_bringup_vel_controller.launch simu:=OFF
 
 ### Activating Control:
 a) Initiate control by pressing 'Play' on the Polyscope interface (Polyscope image).
