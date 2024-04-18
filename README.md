@@ -53,18 +53,30 @@ timeout: 0.0"
 The simulation is using the same tools as the real robot; the polyscope and the ur_robot_driver.
 To have a simualted polyscope you need to build and start the docker_polyscope. 
 
-It will open a GUI exaccly replicating the real polyscope. Everything is preconfigured on the docker as well. 
-
-
-You juste need to do run: 
-docker network create --subnet=192.168.56.0/24 ursim_net
+bash build_docker.sh
 bash start_simu.sh
 
-and the terminal run :
-roslaunch ur_lasa ur5_bringup_vel_controller.launch sim:=ON
+It will open a GUI exaccly replicating the real polyscope. 
+
+You need to create your program with your IP adress. the procedure is the folowing : 
+
+First click on programm robot and choose empty program.
+Then click on  structure/ URCaps/External Control
+Then installation/external Control. And write your IP adresse in the Host IP.
+Finally, save-it
+When you want to control your robot and simulation you just have to run program and chosse your program.
 
 
-Furthemore, if later you want to create different programs, it has a volume bind to the docker. So you can save all the programs you want.
+In the folder docker_interface_ros run :
+bash build_docker.sh
+bash start_docker.sh
+
+it will start the docker with the controlelrs inside, then to control in joint speed control run : 
+
+roslaunch ur_lasa ur5_bringup_vel_controller.launch simu:=ON
+
+and click play on the polyscope GUI to connect both together
+
 
 
 
