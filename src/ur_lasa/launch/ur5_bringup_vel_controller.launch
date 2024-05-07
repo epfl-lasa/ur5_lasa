@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <launch>
   <!-- Define the launch argument for the 'simu' flag -->
-  <arg name="simu" default="Off" /> <!-- Default value is Off -->
+  <arg name="simu" default="OFF" /> <!-- Default value is Off -->
 
   <!-- Conditional argument for robot_IP selection based on the 'simu' flag -->
-  <arg unless="$(eval simu=='On')" name="robot_ip" value="192.168.131.17" />
-  <arg if="$(eval simu=='On')" name="robot_ip" value="127.0.0.1" />
+  <arg unless="$(eval simu=='ON')" name="robot_ip" value="192.168.131.17" />
+  <arg if="$(eval simu=='ON')" name="robot_ip" value="127.0.0.1" />
   <group ns="ur5">
     <arg name="debug" default="false" doc="Debug flag that will get passed on to ur_common.launch" />
     <arg name="reverse_ip" default=""
