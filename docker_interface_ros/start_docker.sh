@@ -91,8 +91,8 @@ if [ "${MODE}" != "connect" ]; then
     # Other
     FWD_ARGS+=("--privileged")
 
-     # Add volume controller_ur5/
-    docker volume rm controller_ur5
+     # Add volume source_ur5_interface_ros/
+    docker volume rm source_ur5_interface_ros
     docker volume create --driver local \
     --opt type="none" \
     --opt device="${PWD}/../src" \
