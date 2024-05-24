@@ -1,21 +1,21 @@
-# UR5 on Ridgeback Platform
+# UR5 
 
 This repository is a comprehensive guide for utilizing the Universal Robots UR5 robotic arm mounted on the Ridgeback mobile base platform.
 
 Purpose:
 The purpose of this repository is to provide detailed instructions and resources on using the UR5 robot arm in conjunction with the Ridgeback mobile base. It covers three primary aspects:
 
-## 1) Setup and Requirements for UR5 on Ridgeback
+## 1) Setup and Requirements for UR5
 - All the packages provided in the 'src' folder are necessary to control the UR5 with ROS. These packages are modified versions derived from the Universal Robot repository (https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git). The main modifications include the addition of some ROS controllers, configuration of files specific to our real UR5, and simplification of the 'roslaunch' command to easily select various types of controllers. This setup also serves as an example for adding additional controllers if desired.
 
 - you need to have the ros control package : sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
 
-## 2) Real Robot Usage on Ridgeback
+## 2) Real Robot Usage 
 To effectively control the UR5 using ROS, the integration requires the use of the Polyscope interface connected to the robot (image) and the preconfigured 'roslaunch' provided by Universal Robots. This integration is facilitated through URCAPS, already set up on the robot for seamless usage with ROS.
 
 
 ### Startup:
-a) Power on both the Ridgeback and the UR5.
+a) Power on the UR5.
 
 ### Polyscope Setup:
 a) On the Polyscope interface, navigate to:
@@ -49,7 +49,7 @@ start_asap: false
 timeout: 0.0" 
 
 
-## 3) Simulation Usage for UR5 on Ridgeback
+## 3) Simulation Usage for UR5 
 The simulation is using the same tools as the real robot; the polyscope and the ur_robot_driver.
 To have a simualted polyscope you need to build and start the docker_polyscope. 
 
