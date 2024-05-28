@@ -16,7 +16,7 @@
         <!-- Run the main Moveit! part -->
         <include file="$(find ur_moveit_config)/launch/moveit_planning_execution.launch" />
 
-        <!-- Bring up the robot -->
+        <!-- Run rviz -->
         <include file="$(find ur_moveit_config)/launch/moveit_rviz.launch" />
     </group>
 </launch>
