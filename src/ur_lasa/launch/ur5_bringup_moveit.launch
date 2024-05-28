@@ -3,20 +3,28 @@
     <!-- Define the launch argument for the 'simu' flag -->
     <arg name="simu" default="OFF" /> <!-- Default value is Off -->
 
+    <!-- Define which is the environment is it running on to run the corresponding launchfiles -->
+    <arg name="environment"
+        doc="Which environment is it running on : [ridgeback, robot_pc, desktop_pc]" />
+
     <!-- Conditional argument for robot_IP selection based on the 'simu' flag -->
     <arg unless="$(eval simu=='ON')" name="robot_ip" default="192.168.131.17" />
     <arg if="$(eval simu=='ON')" name="robot_ip" default="127.0.0.1" />
 
     <group ns="ur5">
-        <!-- Bring up the robot -->
-        <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch">
-            <arg name="robot_ip" value="$(arg robot_ip)" />
-        </include>
+        <group if="$(eval arg('environment') == 'robot_pc' or arg('environment') == 'desktop_pc')">
+            <!-- Bring up the robot -->
+            <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch">
+                <arg name="robot_ip" value="$(arg robot_ip)" />
+            </include>
+        </group>
 
-        <!-- Run the main Moveit! part -->
-        <include file="$(find ur_moveit_config)/launch/moveit_planning_execution.launch" />
+        <group if="$(eval arg('environment') == 'ridgeback' or arg('environment') == 'desktop_pc')">
+            <!-- Run the main Moveit! part -->
+            <include file="$(find ur_moveit_config)/launch/moveit_planning_execution.launch" />
 
-        <!-- Run rviz -->
-        <include file="$(find ur_moveit_config)/launch/moveit_rviz.launch" />
+            <!-- Run rviz -->
+            <include file="$(find ur_moveit_config)/launch/moveit_rviz.launch" />
+        </group>
     </group>
 </launch>
