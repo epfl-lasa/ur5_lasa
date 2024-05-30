@@ -11,6 +11,7 @@
     <arg unless="$(eval simu=='ON')" name="robot_ip" default="192.168.131.17" />
     <arg if="$(eval simu=='ON')" name="robot_ip" default="127.0.0.1" />
 
+    <!-- <group ns="ur5"> -->
     <!-- Choose controller manager: fake, simple, or ros_control -->
     <arg name="moveit_controller_manager" default="ros_control" />
 
@@ -27,11 +28,11 @@
     <arg name="script_command_port" default="50004"
         doc="Port that will be opened by the driver to allow forwarding script commands to the robot." />
     <arg name="tf_prefix" default="" doc="tf_prefix used for the robot." />
-    <!-- <arg name="controllers"
-        default="joint_state_controller "
-        doc="Controllers that are activated by default." /> -->
-    <!-- <arg name="stopped_controllers" default="joint_group_vel_controller "
-        doc="Controllers that are initally loaded, but not started." /> -->
+    <arg name="controllers"
+        default="joint_state_controller pos_joint_traj_controller "
+        doc="Controllers that are activated by default." />
+    <arg name="stopped_controllers" default="joint_group_vel_controller "
+        doc="Controllers that are initally loaded, but not started." />
     <arg name="controller_config_file"
         default="$(find ur_lasa)/config/ur5_controllers.yaml"
         doc="Config file used for defining the ROS-Control controllers." />
@@ -45,23 +46,22 @@
     <arg name="ur_hardware_interface_node_required" default="true"
         doc="Shut down ros environment if ur_hardware_interface-node dies." />
 
-    <!-- <group ns="ur5"> -->
     <group if="$(eval arg('environment') == 'ridgeback' or arg('environment') == 'desktop_pc')">
         <!-- Bring up the robot -->
         <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch" pass_all_args="true">
-            <arg name="use_tool_communication" value="false" />
+            <arg name="use_tool_communication" value="true" />
         </include>
     </group>
 
     <group if="$(eval arg('environment') == 'navigation' or arg('environment') == 'desktop_pc')">
         <!-- Run the main Moveit! part -->
-        <include file="$(find ur_moveit_config)/launch/move_group.launch">
+        <include file="$(find ur_moveit_config)/launch/move_group.launch" pass_all_args="true">
             <arg name="allow_trajectory_execution" value="true" />
             <arg name="info" value="true" />
         </include>
 
         <!-- Run rviz -->
-        <include file="$(find ur_moveit_config)/launch/moveit_rviz.launch">
+        <include file="$(find ur_moveit_config)/launch/moveit_rviz.launch" pass_all_args="true">
             <arg name="rviz_config" value="true" />
         </include>
     </group>
