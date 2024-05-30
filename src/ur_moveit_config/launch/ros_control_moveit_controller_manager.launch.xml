@@ -1,5 +1,5 @@
 <launch>
-	<!-- <param name="ros_control_namespace" value="/ur5/" /> -->
+	<param name="ros_control_namespace" value="/ur5/" />
 
 	<!-- Define MoveIt controller manager plugin -->
 	<param name="moveit_controller_manager"
