@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur5_robot">
-  <xacro:property name="prefix" />
   <xacro:arg name="ee_tool" default="none" />
+
   <!--
     This is a convenience top-level xacro which loads the macro for the UR5e
     which defines the default values for the various "parameters files"
