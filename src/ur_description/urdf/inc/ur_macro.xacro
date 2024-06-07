@@ -361,6 +361,19 @@
       <child link="${prefix}tool0" />
     </joint>
 
-    <xacro:include filename="$(find ur_description)/urdf/tools.urdf.xacro" />
+    <xacro:if value="${ee_tool != 'none'}">
+      <xacro:include filename="$(find ur_description)/urdf/tools.urdf.xacro" />
+    </xacro:if>
+
+    <xacro:if value="${ee_tool == 'none'}">
+      <link name="${prefix}virtual_link" />
+
+      <joint name="${prefix}tool0-virtual_link" type="fixed">
+        <parent link="${prefix}tool0" />
+        <child link="${prefix}virtual_link" />
+        <origin rpy="0 0 0" xyz="0 0 0" />
+      </joint>
+    </xacro:if>
+
   </xacro:macro>
 </robot>
