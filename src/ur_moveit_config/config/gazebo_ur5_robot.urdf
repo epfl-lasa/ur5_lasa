@@ -285,7 +285,7 @@
            Use the joint between 'base_link' and 'base_link_inertia' (a dummy
            link/frame) to introduce the necessary rotation over Z (of pi rad).
       -->
-        <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+        <origin rpy="0 0 1.5707963267948966" xyz="0 0 0" />
     </joint>
     <joint name="shoulder_pan_joint" type="revolute">
         <parent link="base_link_inertia" />
@@ -362,8 +362,44 @@
         <parent link="flange" />
         <child link="tool0" />
     </joint>
+    <!-- ROS-Industrial 'sensor' frame: attachment point for force-torque sensors -->
+    <!-- TODO Add the force torque sensor using a parameter -->
+    <link name="sensor">
+        <visual>
+            <geometry>
+                <mesh filename="package://ur_description/meshes/ur5/visual/force_torque.stl" scale="1 1 1" />
+            </geometry>
+            <!-- Small offset to avoid any collisions between adjacent -->
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <material name="LightGrey" />
+        </visual>
+        <inertial>
+            <mass value="0.5" />
+            <inertia ixx="0.1" ixy="-0.000000" ixz="-0.000000" iyy="0.1" iyz="-0.000000" izz="0.1" />
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+        </inertial>
+        <collision>
+            <geometry>
+                <mesh filename="package://ur_description/meshes/ur5/collision/force_torque.stl" scale="1 1 1" />
+            </geometry>
+            <!-- Small z offset to avoid any collisions between adjacent -->
+            <origin rpy="0 0 0" xyz="0 0 0" />
+        </collision>
+    </link>
+    <joint name="tool0-sensor" type="fixed">
+        <!-- default toolframe: X+ left, Y+ up, Z+ front -->
+        <origin rpy="0 0 0" xyz="0 0 0.035" />
+        <parent link="tool0" />
+        <child link="sensor" />
+    </joint>
+    <link name="virtual_link" />
+    <joint name="sensor-virtual_link" type="fixed">
+        <parent link="sensor" />
+        <child link="virtual_link" />
+        <origin rpy="0 0 0" xyz="0 0 0" />
+    </joint>
     <gazebo>
-        <plugin name="gazebo_ros_control">
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
             <robotNamespace>/</robotNamespace>
         </plugin>
     </gazebo>
