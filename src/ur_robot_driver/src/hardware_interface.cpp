@@ -385,8 +385,9 @@ bool HardwareInterface::init(ros::NodeHandle& root_nh, ros::NodeHandle& robot_hw
   registerInterface(&twist_interface_);
   registerInterface(&pose_interface_);
 
-  tcp_pose_pub_.reset(new realtime_tools::RealtimePublisher<tf2_msgs::TFMessage>(root_nh, "/tf", 100));
+  tcp_pose_tf_pub_.reset(new realtime_tools::RealtimePublisher<tf2_msgs::TFMessage>(root_nh, "/tf", 100));
   tcp_twist_pub_.reset(new realtime_tools::RealtimePublisher<geometry_msgs::Twist>(robot_hw_nh, "ee_twist", 100));
+  tcp_pose_pub_.reset(new realtime_tools::RealtimePublisher<geometry_msgs::Pose>(robot_hw_nh, "ee_pose", 100));
   io_pub_.reset(new realtime_tools::RealtimePublisher<ur_msgs::IOStates>(robot_hw_nh, "io_states", 1));
   io_pub_->msg_.digital_in_states.resize(actual_dig_in_bits_.size());
   io_pub_->msg_.digital_out_states.resize(actual_dig_out_bits_.size());
@@ -543,6 +544,7 @@ void HardwareInterface::read(const ros::Time& time, const ros::Duration& period)
     // Transform fts measurements to tool frame
     extractToolPose(time);
     transformForceTorque();
+    publishPoseTf();
     publishPose();
     publishTwist();
     publishRobotAndSafetyMode();
@@ -867,12 +869,12 @@ void HardwareInterface::extractToolPose(const ros::Time& timestamp) {
   tcp_transform_.transform.rotation = tf2::toMsg(rotation);
 }
 
-void HardwareInterface::publishPose() {
-  if (tcp_pose_pub_) {
-    if (tcp_pose_pub_->trylock()) {
-      tcp_pose_pub_->msg_.transforms.clear();
-      tcp_pose_pub_->msg_.transforms.push_back(tcp_transform_);
-      tcp_pose_pub_->unlockAndPublish();
+void HardwareInterface::publishPoseTf() {
+  if (tcp_pose_tf_pub_) {
+    if (tcp_pose_tf_pub_->trylock()) {
+      tcp_pose_tf_pub_->msg_.transforms.clear();
+      tcp_pose_tf_pub_->msg_.transforms.push_back(tcp_transform_);
+      tcp_pose_tf_pub_->unlockAndPublish();
     }
   }
 }
@@ -882,6 +884,15 @@ void HardwareInterface::publishTwist() {
     if (tcp_twist_pub_->trylock()) {
       tcp_twist_pub_->msg_ = cart_twist_;
       tcp_twist_pub_->unlockAndPublish();
+    }
+  }
+}
+
+void HardwareInterface::publishPose() {
+  if (tcp_pose_pub_) {
+    if (tcp_pose_pub_->trylock()) {
+      tcp_pose_pub_->msg_ = cart_pose_;
+      tcp_pose_pub_->unlockAndPublish();
     }
   }
 }

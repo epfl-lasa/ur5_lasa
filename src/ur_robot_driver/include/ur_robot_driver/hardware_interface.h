@@ -175,9 +175,19 @@ protected:
    *
    * Requires extractToolPose() to be run first.
    */
-  void publishPose();
+  void publishPoseTf();
 
+  /*!
+   * \brief Publishes the tool linear and angular velocity in a ROS topic
+   */
   void publishTwist();
+
+  /*!
+   * \brief Publishes the tool pose in a ROS topic
+   *
+   * Requires extractToolPose() to be run first.
+   */
+  void publishPose();
 
   void publishIOData();
   void publishToolData();
@@ -299,8 +309,9 @@ protected:
   std::bitset<4> robot_status_bits_;
   std::bitset<11> safety_status_bits_;
 
-  std::unique_ptr<realtime_tools::RealtimePublisher<tf2_msgs::TFMessage>> tcp_pose_pub_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<tf2_msgs::TFMessage>> tcp_pose_tf_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::Twist>> tcp_twist_pub_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::Pose>> tcp_pose_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_msgs::IOStates>> io_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_msgs::ToolDataMsg>> tool_data_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_dashboard_msgs::RobotMode>> robot_mode_pub_;
