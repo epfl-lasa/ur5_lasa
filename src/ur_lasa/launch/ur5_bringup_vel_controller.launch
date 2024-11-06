@@ -40,5 +40,5 @@
   </group>
 
 
-<include if="$(eval simu=='ON')" file="$(find ur_lasa)/launch/ridgeback_rviz.launch" />
+<!-- <include if="$(eval simu=='ON')" file="$(find ur_lasa)/launch/ridgeback_rviz.launch" /> -->
 </launch>
