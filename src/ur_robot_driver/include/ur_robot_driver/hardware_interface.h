@@ -28,67 +28,55 @@
 #ifndef UR_DRIVER_HARDWARE_INTERFACE_H_INCLUDED
 #define UR_DRIVER_HARDWARE_INTERFACE_H_INCLUDED
 
-#include <hardware_interface/robot_hw.h>
+#include <cartesian_control_msgs/FollowCartesianTrajectoryAction.h>
+#include <cartesian_control_msgs/FollowCartesianTrajectoryFeedback.h>
+#include <cartesian_interface/cartesian_command_interface.h>
+#include <cartesian_interface/cartesian_state_handle.h>
+#include <control_msgs/FollowJointTrajectoryAction.h>
+#include <control_msgs/FollowJointTrajectoryFeedback.h>
+// #include <geometry_msgs/Twist.h>
 #include <hardware_interface/force_torque_sensor_interface.h>
 #include <hardware_interface/joint_command_interface.h>
 #include <hardware_interface/joint_state_interface.h>
+#include <hardware_interface/robot_hw.h>
+#include <industrial_robot_status_interface/industrial_robot_status_interface.h>
 #include <pass_through_controllers/trajectory_interface.h>
-#include <algorithm>
+#include <realtime_tools/realtime_publisher.h>
+#include <scaled_joint_trajectory_controller/scaled_joint_command_interface.h>
+#include <speed_scaling_interface/speed_scaling_interface.h>
 #include <std_msgs/Bool.h>
 #include <std_msgs/Float64.h>
 #include <std_msgs/String.h>
-#include <std_srvs/Trigger.h>
 #include <std_srvs/SetBool.h>
-#include <realtime_tools/realtime_publisher.h>
-#include <tf2_msgs/TFMessage.h>
+#include <std_srvs/Trigger.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
-
-#include <control_msgs/FollowJointTrajectoryAction.h>
-#include <control_msgs/FollowJointTrajectoryFeedback.h>
-#include <cartesian_control_msgs/FollowCartesianTrajectoryAction.h>
-#include <cartesian_control_msgs/FollowCartesianTrajectoryFeedback.h>
-
+#include <tf2_msgs/TFMessage.h>
 #include <ur_client_library/control/trajectory_point_interface.h>
-#include <ur_msgs/IOStates.h>
-#include <ur_msgs/ToolDataMsg.h>
-#include <ur_msgs/SetIO.h>
-#include <ur_msgs/SetSpeedSliderFraction.h>
-#include <ur_msgs/SetPayload.h>
-
-#include <cartesian_interface/cartesian_command_interface.h>
-#include <cartesian_interface/cartesian_state_handle.h>
-
-#include <speed_scaling_interface/speed_scaling_interface.h>
-#include <scaled_joint_trajectory_controller/scaled_joint_command_interface.h>
-
 #include <ur_client_library/ur/ur_driver.h>
-#include <ur_robot_driver/dashboard_client_ros.h>
-
 #include <ur_dashboard_msgs/RobotMode.h>
 #include <ur_dashboard_msgs/SafetyMode.h>
+#include <ur_msgs/IOStates.h>
+#include <ur_msgs/SetIO.h>
+#include <ur_msgs/SetPayload.h>
+#include <ur_msgs/SetSpeedSliderFraction.h>
+#include <ur_msgs/ToolDataMsg.h>
+#include <ur_robot_driver/dashboard_client_ros.h>
 
-#include <industrial_robot_status_interface/industrial_robot_status_interface.h>
+#include <algorithm>
 #include <kdl/frames.hpp>
 
-namespace ur_driver
-{
+namespace ur_driver {
 /*!
  * \brief Possible states for robot control
  */
-enum class PausingState
-{
-  PAUSED,
-  RUNNING,
-  RAMPUP
-};
+enum class PausingState { PAUSED, RUNNING, RAMPUP };
 
 /*!
  * \brief The HardwareInterface class handles the interface between the ROS system and the main
  * driver. It contains the read and write methods of the main control loop and registers various ROS
  * topics and services.
  */
-class HardwareInterface : public hardware_interface::RobotHW
-{
+class HardwareInterface : public hardware_interface::RobotHW {
 public:
   /*!
    * \brief Creates a new HardwareInterface object.
@@ -187,6 +175,18 @@ protected:
    *
    * Requires extractToolPose() to be run first.
    */
+  void publishPoseTf();
+
+  /*!
+   * \brief Publishes the tool linear and angular velocity in a ROS topic
+   */
+  void publishTwist();
+
+  /*!
+   * \brief Publishes the tool pose in a ROS topic
+   *
+   * Requires extractToolPose() to be run first.
+   */
   void publishPose();
 
   void publishIOData();
@@ -202,10 +202,12 @@ protected:
   bool stopControl(std_srvs::TriggerRequest& req, std_srvs::TriggerResponse& res);
 
   template <typename T>
-  void readData(const std::unique_ptr<urcl::rtde_interface::DataPackage>& data_pkg, const std::string& var_name,
+  void readData(const std::unique_ptr<urcl::rtde_interface::DataPackage>& data_pkg,
+                const std::string& var_name,
                 T& data);
   template <typename T, size_t N>
-  void readBitsetData(const std::unique_ptr<urcl::rtde_interface::DataPackage>& data_pkg, const std::string& var_name,
+  void readBitsetData(const std::unique_ptr<urcl::rtde_interface::DataPackage>& data_pkg,
+                      const std::string& var_name,
                       std::bitset<N>& data);
 
   bool setSpeedSlider(ur_msgs::SetSpeedSliderFractionRequest& req, ur_msgs::SetSpeedSliderFractionResponse& res);
@@ -307,7 +309,9 @@ protected:
   std::bitset<4> robot_status_bits_;
   std::bitset<11> safety_status_bits_;
 
-  std::unique_ptr<realtime_tools::RealtimePublisher<tf2_msgs::TFMessage>> tcp_pose_pub_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<tf2_msgs::TFMessage>> tcp_pose_tf_pub_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::Twist>> tcp_twist_pub_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::Pose>> tcp_pose_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_msgs::IOStates>> io_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_msgs::ToolDataMsg>> tool_data_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_dashboard_msgs::RobotMode>> robot_mode_pub_;
@@ -347,6 +351,6 @@ protected:
   std::string tf_prefix_;
 };
 
-}  // namespace ur_driver
+} // namespace ur_driver
 
-#endif  // ifndef UR_DRIVER_HARDWARE_INTERFACE_H_INCLUDED
+#endif // ifndef UR_DRIVER_HARDWARE_INTERFACE_H_INCLUDED
