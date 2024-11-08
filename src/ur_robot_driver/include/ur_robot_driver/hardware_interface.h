@@ -34,7 +34,6 @@
 #include <cartesian_interface/cartesian_state_handle.h>
 #include <control_msgs/FollowJointTrajectoryAction.h>
 #include <control_msgs/FollowJointTrajectoryFeedback.h>
-// #include <geometry_msgs/Twist.h>
 #include <hardware_interface/force_torque_sensor_interface.h>
 #include <hardware_interface/joint_command_interface.h>
 #include <hardware_interface/joint_state_interface.h>
@@ -61,6 +60,7 @@
 #include <ur_msgs/SetSpeedSliderFraction.h>
 #include <ur_msgs/ToolDataMsg.h>
 #include <ur_robot_driver/dashboard_client_ros.h>
+#include <geometry_msgs/TwistStamped.h>
 
 #include <algorithm>
 #include <kdl/frames.hpp>
@@ -310,8 +310,8 @@ protected:
   std::bitset<11> safety_status_bits_;
 
   std::unique_ptr<realtime_tools::RealtimePublisher<tf2_msgs::TFMessage>> tcp_pose_tf_pub_;
-  std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::Twist>> tcp_twist_pub_;
-  std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::Pose>> tcp_pose_pub_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::TwistStamped>> tcp_twist_pub_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<geometry_msgs::PoseStamped>> tcp_pose_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_msgs::IOStates>> io_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_msgs::ToolDataMsg>> tool_data_pub_;
   std::unique_ptr<realtime_tools::RealtimePublisher<ur_dashboard_msgs::RobotMode>> robot_mode_pub_;
