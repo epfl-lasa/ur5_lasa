@@ -2,6 +2,8 @@
 <launch>
   <!-- Define the launch argument for the 'simu' flag -->
   <arg name="simu" default="OFF" /> <!-- Default value is Off -->
+  <arg name="ft_sensor" default="OFF" /> <!-- Default value is Off -->
+  <arg name="rviz" default="OFF" /> <!-- Default value is Off -->
 
   <!-- Conditional argument for robot_IP selection based on the 'simu' flag -->
   <arg unless="$(eval simu=='ON')" name="robot_ip" default="192.168.131.17" />
@@ -40,5 +42,7 @@
   </group>
 
 
-<!-- <include if="$(eval simu=='ON')" file="$(find ur_lasa)/launch/ridgeback_rviz.launch" /> -->
+  <node if="$(eval ft_sensor=='ON')" pkg="robotiq_ft_sensor" type="rq_sensor" name="rq_sensor_node" output="screen" />
+
+  <include if="$(eval rviz=='ON')" file="$(find ur_lasa)/launch/ridgeback_rviz.launch" />
 </launch>
