@@ -1,0 +1,21 @@
+################################################################################
+# There are three places where your actions are needed in this compose file
+# These are marked with the label `ACTIONS_NEEDED`.
+################################################################################
+
+services:
+  ros_interface:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /tmp/.docker.xauth:/tmp/.docker.xauth:rw
+      - ${HOME}/.gitconfig:/home/ros/.gitconfig:ro
