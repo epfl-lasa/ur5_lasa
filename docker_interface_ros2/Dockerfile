@@ -1,43 +1,41 @@
+# Set the ROS distribution dynamically
 ARG ROS_DISTRO=humble
 FROM ros:${ROS_DISTRO}
 
+# Use bash shell for all subsequent commands
 SHELL ["/bin/bash", "-c"]
 
-### Add a few tools
-RUN sudo apt update && sudo apt install -y \
+# Update and install essential tools and ROS packages
+RUN apt update && apt install -y \
     bash-completion \
     silversearcher-ag \
     apt-transport-https \
     less \
     alsa-utils \
-    ros-rolling-ur \
     ros-${ROS_DISTRO}-ur-msgs \
     ros-${ROS_DISTRO}-ur-robot-driver \
-    && sudo apt upgrade -y && sudo apt clean
-### apt update and clean
-RUN sudo apt update && sudo apt upgrade -y && sudo apt clean
+    ros-${ROS_DISTRO}-ament-cmake \
+    && apt upgrade -y && apt clean
 
+# Set the working directory to the ROS workspace
+WORKDIR /home/ros2_ws
 
+# Copy your ROS package into the container
+COPY src/Universal_Robots_ROS2_Driver/ src/
 
+# Set up ROS environment and install dependencies using rosdep
+RUN source /opt/ros/${ROS_DISTRO}/setup.bash && \
+    rosdep update && \
+    rosdep install --from-paths src --ignore-src -r -y
 
-WORKDIR /home/
-RUN git clone --depth 1 https://github.com/epfl-lasa/ur5_lasa.git
+# Build the ROS workspace using colcon
+RUN source /opt/ros/${ROS_DISTRO}/setup.bash && \
+    colcon build
 
-RUN cp -R ur5_lasa/docker_interface_ros2/src/ ros_ws/src/
+# Add ROS environment sourcing to the bashrc for interactive sessions
+RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc && \
+    echo "source /home/ros2_ws/install/setup.bash" >> ~/.bashrc && \
+    echo "ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=127.0.01" >> ~/.bashrc
 
-# Cleaning the workspace
-RUN rm -r /home/ur5_lasa
-
-### Build ros workspace
-WORKDIR /home/ros_ws
-RUN rosdep update
-RUN source /home/ros_ws/ .bashrc && rosdep install --from-paths src --ignore-src -r -y
-
-
-# RUN ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=127.0.0.1
-#-------------------------------------------------------------------------------
-RUN echo "cd /home/ros_ws" >> ~/.bashrc
-RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
-# RUN echo "catkin build" >> ~/.bashrc
-# RUN echo "source install/setup.bash" >> ~/.bashrc
-# RUN echo "roslaunch wp5_tasks integrationShotcreteKUL.launch" >> ~/.bashrc
+# Default command to run bash shell with ROS environment setup
+CMD ["bash"]
