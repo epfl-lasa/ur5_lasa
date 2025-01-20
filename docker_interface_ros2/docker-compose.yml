@@ -65,6 +65,6 @@ services:
       - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority
       - /run/user/1000/gdm/Xauthority:/run/user/1000/gdm/Xauthority
       - /dev:/dev
-      - ./src/Universal_Robots_ROS2_Driver/:/home/ros2_ws/src/
+      # - ./src/Universal_Robots_ROS2_Driver_lasa/:/home/ros2_ws/src/
     devices:
       - /dev:/dev

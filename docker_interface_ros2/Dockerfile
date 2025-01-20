@@ -21,7 +21,7 @@ RUN apt update && apt install -y \
 WORKDIR /home/ros2_ws
 
 # Copy your ROS package into the container
-COPY src/Universal_Robots_ROS2_Driver/ src/
+COPY src/Universal_Robots_ROS2_Driver_lasa/ src/
 
 # Set up ROS environment and install dependencies using rosdep
 RUN source /opt/ros/${ROS_DISTRO}/setup.bash && \
