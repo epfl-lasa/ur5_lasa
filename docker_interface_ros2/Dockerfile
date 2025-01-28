@@ -28,6 +28,10 @@ WORKDIR /home/ros2_ws/src
 COPY src/ .
 WORKDIR /home/ros2_ws/
 
+
+# COPY src/Universal_Robots_ROS2_Description/ src/Universal_Robots_ROS2_Description
+# COPY src/rq_fts_ros2_driver/ src/rq_fts_ros2_driver
+
 # Set up ROS environment and install dependencies using rosdep
 RUN source /opt/ros/${ROS_DISTRO}/setup.bash && \
     sudo rosdep fix-permissions && \
