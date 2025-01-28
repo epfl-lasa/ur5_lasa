@@ -28,9 +28,14 @@ WORKDIR /home/ros2_ws
 
 # Copy your ROS package into the container
 # COPY src /src
-COPY src/Universal_Robots_ROS2_Driver_lasa/ src/Universal_Robots_ROS2_Driver_lasa
+RUN git clone -b humble https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver.git src/Universal_Robots_ROS2_Driver
+RUN git clone  https://github.com/panagelak/rq_fts_ros2_driver.git src/rq_fts_ros2_driver
+WORKDIR /home/ros2_ws/Universal_Robots_ROS2_Driver && \
+    rm ur_robot_driver -rf
+COPY ur_robot_driver ur_robot_driver
+
 # COPY src/Universal_Robots_ROS2_Description/ src/Universal_Robots_ROS2_Description
-COPY src/rq_fts_ros2_driver/ src/rq_fts_ros2_driver
+# COPY src/rq_fts_ros2_driver/ src/rq_fts_ros2_driver
 
 # Set up ROS environment and install dependencies using rosdep
 RUN source /opt/ros/${ROS_DISTRO}/setup.bash && \
