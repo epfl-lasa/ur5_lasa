@@ -1,0 +1,6 @@
+[submodule "docker_interface_ros2/src/s"]
+	path = docker_interface_ros2/src/s
+	url = git@github.com:panagelak/rq_fts_ros2_driver.git
+[submodule "docker_interface_ros2/src/rq_fts_ros2_driver"]
+	path = docker_interface_ros2/src/rq_fts_ros2_driver
+	url = git@github.com:panagelak/rq_fts_ros2_driver.git
