@@ -63,7 +63,8 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /tmp/.docker.xauth:/tmp/.docker.xauth:rw
       - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority
-      - /run/user/1000/gdm/Xauthority:/run/user/1000/gdm/Xauthority
+      #- /run/user/1000/gdm/Xauthority:/run/user/1000/gdm/Xauthority
+      - /run/user/1000/gdm/Xauthority:/root/.Xauthority
       - /dev:/dev
       - /config:/config
       - ./src:/home/ros2_ws/src
