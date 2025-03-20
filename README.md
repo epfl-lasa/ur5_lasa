@@ -67,9 +67,9 @@ Finally, save-it
 When you want to control your robot and simulation you just have to run program and chosse your program.
 
 
-In the folder docker_interface_ros run :
-bash build_docker.sh
-bash start_docker.sh
+In the folder docker_interface_ros2 run :
+docker compose build
+docker compose up
 
 it will start the docker with the controlelrs inside, then to control in joint speed control run : 
 
