@@ -270,10 +270,12 @@ std::vector<hardware_interface::StateInterface> URPositionHardwareInterface::exp
   state_interfaces.emplace_back(hardware_interface::StateInterface(
       tf_prefix + "get_robot_software_version", "get_version_bugfix", &get_robot_software_version_bugfix_));
 
+
+
+
+
   state_interfaces.emplace_back(hardware_interface::StateInterface(
       tf_prefix + "get_robot_software_version", "get_version_build", &get_robot_software_version_build_));
-
-
 
   // Tool contact export
   state_interfaces.emplace_back(hardware_interface::StateInterface(
@@ -408,6 +410,7 @@ std::vector<hardware_interface::CommandInterface> URPositionHardwareInterface::e
                                                                          "setpoint_velocities_" + std::to_string(i),
                                                                          &passthrough_trajectory_velocities_[i]));
   }
+
 
   for (size_t i = 0; i < 6; ++i) {
     command_interfaces.emplace_back(hardware_interface::CommandInterface(tf_prefix + PASSTHROUGH_GPIO,
