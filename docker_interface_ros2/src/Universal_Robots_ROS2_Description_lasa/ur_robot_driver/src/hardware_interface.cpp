@@ -100,6 +100,11 @@ URPositionHardwareInterface::on_init(const hardware_interface::HardwareInfo& sys
   trajectory_joint_velocities_.clear();
   trajectory_joint_accelerations_.clear();
 
+  // dummy tool contact init
+  tool_contact_result_ = 0.0;
+  tool_contact_state_ = 0.0;
+  tool_contact_set_state_cmd_ = 0.0;
+
   for (const hardware_interface::ComponentInfo& joint : info_.joints) {
     if (joint.command_interfaces.size() != 2) {
       RCLCPP_FATAL(rclcpp::get_logger("URPositionHardwareInterface"),
@@ -268,6 +273,14 @@ std::vector<hardware_interface::StateInterface> URPositionHardwareInterface::exp
   state_interfaces.emplace_back(hardware_interface::StateInterface(
       tf_prefix + "get_robot_software_version", "get_version_build", &get_robot_software_version_build_));
 
+
+
+  // Tool contact export
+  state_interfaces.emplace_back(hardware_interface::StateInterface(
+      tf_prefix + "tool_contact", "tool_contact_result", &tool_contact_result_));
+  state_interfaces.emplace_back(hardware_interface::StateInterface(
+      tf_prefix + "tool_contact", "tool_contact_state", &tool_contact_state_));
+
   return state_interfaces;
 }
 
@@ -401,6 +414,12 @@ std::vector<hardware_interface::CommandInterface> URPositionHardwareInterface::e
                                                                          "setpoint_accelerations_" + std::to_string(i),
                                                                          &passthrough_trajectory_accelerations_[i]));
   }
+
+
+
+  // Tool contact export
+  command_interfaces.emplace_back(hardware_interface::CommandInterface(
+      tf_prefix + "tool_contact", "tool_contact_set_state", &tool_contact_set_state_cmd_));
 
   return command_interfaces;
 }

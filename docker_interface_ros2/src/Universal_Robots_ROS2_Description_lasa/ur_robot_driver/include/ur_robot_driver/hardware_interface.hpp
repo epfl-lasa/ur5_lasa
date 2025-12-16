@@ -228,6 +228,11 @@ protected:
   double get_robot_software_version_bugfix_;
   double get_robot_software_version_build_;
 
+  // tool contact dummy variables
+  double tool_contact_result_;
+  double tool_contact_state_;
+  double tool_contact_set_state_cmd_;
+
   // Freedrive mode controller interface values
   bool freedrive_activated_;
   bool freedrive_mode_controller_running_;

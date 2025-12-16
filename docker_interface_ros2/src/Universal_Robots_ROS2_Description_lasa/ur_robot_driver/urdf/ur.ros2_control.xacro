@@ -292,6 +292,12 @@
       </gpio>
 
 
+      <gpio name="${tf_prefix}tool_contact">
+        <state_interface name="tool_contact_result"/>
+        <state_interface name="tool_contact_state"/>
+        <command_interface name="tool_contact_set_state"/>
+      </gpio>
+
       <gpio name="${tf_prefix}get_robot_software_version">
         <state_interface name="get_version_major"/>
         <state_interface name="get_version_minor"/>
