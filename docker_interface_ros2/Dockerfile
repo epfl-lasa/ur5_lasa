@@ -43,10 +43,16 @@ RUN source /opt/ros/${ROS_DISTRO}/setup.bash && \
     colcon build
 
 # Add ROS environment sourcing to the bashrc for interactive sessions
-RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc && \
-    echo "source /home/ros2_ws/install/setup.bash" >> ~/.bashrc 
-    # && \
-    # echo "ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=127.0.01" >> ~/.bashrc
+# RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc && \
+#     echo "source /home/ros2_ws/install/setup.bash" >> ~/.bashrc 
+#     # && \
+#     # echo "ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=127.0.01" >> ~/.bashrc
+
+RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash && \
+    source /home/ros2_ws/install/setup.bash && \
+    ros2 launch ur_robot_driver lasa_bringup.launch.py simu:=OFF ft_sensor:=ON" >> ~/.bashrc
+
+
 
 # Default command to run bash shell with ROS environment setup
 CMD ["bash"]
